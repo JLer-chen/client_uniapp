@@ -1,0 +1,416 @@
+{
+	"problem": [{
+		"id": 23,
+		"title": "近1个月，晚上上床睡觉通常几点钟",
+		"intro": "金额（必填）",
+		"required": true,
+		"type": "input",
+		"parentId": 0,
+		"continue": true,
+		"placeholder": "22/24"
+	}, {
+		"id": 2,
+		"title": "近1个月，从上床到入睡通常需要_几分钟。",
+		"intro": "职业（必填）",
+		"required": true,
+		"type": "input",
+		"parentId": 0,
+		"continue": true,
+		
+		"placeholder": "10/30"
+	}, {
+		"id": 8,
+		"title": "近1个月，通常早上几点起床",
+		"intro": "上班族（必填）",
+		"required": true,
+		"type": "input",
+		"parentId": 93,
+		"continue": true,
+		"placeholder": "7/8"
+	}, {
+		"id": 10,
+		"title": "近1个月，每夜通常实际睡眠几小时（不等于卧床时间）",
+		"intro": "上班族（必填）",
+		"required": true,
+		"type": "input",
+		"parentId": 93,
+		"continue": true,
+		
+		"placeholder": "8/9"
+	}, {
+		"id": 6,
+		"title": "a. 入睡困难",
+		"intro": "上班族（必填）",
+		"required": true,
+		"type": "radio",
+		"parentId": 93,
+		"continue": true,
+		"answer": [{
+			"name": "⑴无",
+			"id": 98,
+			"continue": true
+		}, {
+			"name": "⑵〈1次/周",
+			"id": 99,
+			"continue": true
+		},{
+			"name": "⑶1-2次/周",
+			"id": 997,
+			"continue": true
+		},{
+			"name": "⑷≥ 3次/周",
+			"id": 996,
+			"continue": true
+		}],
+		"placeholder": null
+	}, {
+		"id": 11,
+		"title": "b. 夜间易醒或早醒",
+		"intro": "公积金（非必填）",
+		"required": false,
+		"type": "radio",
+		"parentId": 98,
+		"continue": true,
+		"answer": [{
+			"name": "⑴无",
+			"id": 995,
+			"continue": true
+		}, {
+			"name": "⑵〈1次/周",
+			"id": 994,
+			"continue": true
+		},{
+			"name": "⑶1-2次/周",
+			"id": 993,
+			"continue": true
+		},{
+			"name": "⑷≥ 3次/周",
+			"id": 992,
+			"continue": true
+		}],
+		"placeholder": "请输入公积金购买多少个月"
+	}, {
+		"id": 12,
+		"title": "c. 夜间去厕所",
+		"intro": "公积金（非必选）",
+		"required": false,
+		"type": "radio",
+		"parentId": 98,
+		"continue": true,
+		"answer": [{
+			"name": "⑴无",
+			"id": 991,
+			"continue": true
+		}, {
+			"name": "⑵〈1次/周",
+			"id": 990,
+			"continue": true
+		},{
+			"name": "⑶1-2次/周",
+			"id": 989,
+			"continue": true
+		},{
+			"name": "⑷≥ 3次/周",
+			"id": 988,
+			"continue": true
+		}],
+		"placeholder": "请输入公积金月缴多少钱？"
+	}, {
+		"id": 9,
+		"title": "d. 呼吸不畅",
+		"intro": "企业主（必填）",
+		"required": true,
+		"type": "radio",
+		"parentId": 94,
+		"continue": true,
+		"answer": [{
+			"name": "⑴无",
+			"id": 103,
+			"continue": true
+		}, {
+			"name": "⑵〈1次/周",
+			"id": 104,
+			"continue": true
+		},
+		{
+			"name": "⑶1-2次/周",
+			"id": 987,
+			"continue": true
+		}, {
+			"name": "⑷≥ 3次/周",
+			"id": 986,
+			"continue": true
+		}],
+		"placeholder": null
+	}, {
+		"id": 13,
+		"title": "e. 咳嗽或鼾声高",
+		"intro": "企业主（非必选）",
+		"required": false,
+		"type": "radio",
+		"parentId": 103,
+		"answer": [{
+			"name": "⑴无",
+			"id": 985,
+			"continue": true
+		}, {
+			"name": "⑵〈1次/周",
+			"id": 984,
+			"continue": true
+		},
+		{
+			"name": "⑶1-2次/周",
+			"id": 983,
+			"continue": true
+		}, {
+			"name": "⑷≥ 3次/周",
+			"id": 982,
+			"continue": true
+		}],
+		"continue": true,
+		"placeholder": "请输入年营业额缴纳税收多少元？"
+	}, {
+		"id": 7,
+		"title": "f. 感觉冷",
+		"intro": "车子（必填）",
+		"required": true,
+		"type": "radio",
+		"parentId": 654,
+		"continue": true,
+		"answer": [{
+			"name": "⑴无",
+			"id": 981,
+			"continue": true
+		}, {
+			"name": "⑵〈1次/周",
+			"id": 980,
+			"continue": true
+		},
+		{
+			"name": "⑶1-2次/周",
+			"id": 979,
+			"continue": true
+		}, {
+			"name": "⑷≥ 3次/周",
+			"id": 978,
+			"continue": true
+		}],
+		"placeholder": null
+	}, {
+		"id": 15,
+		"title": "g. 感觉热",
+		"intro": "车子（非必填）",
+		"required": false,
+		"type": "radio",
+		"parentId": 107,
+		"answer": [{
+			"name": "⑴无",
+			"id": 977,
+			"continue": true
+		}, {
+			"name": "⑵〈1次/周",
+			"id": 976,
+			"continue": true
+		},
+		{
+			"name": "⑶1-2次/周",
+			"id": 976,
+			"continue": true
+		}, {
+			"name": "⑷≥ 3次/周",
+			"id": 974,
+			"continue": true
+		}],
+		"continue": true,
+		"placeholder": "请输入车辆价值多少钱（元）"
+	}, {
+		"id": 14,
+		"title": "h. 做恶梦",
+		"intro": "车子（必填）",
+		"required": true,
+		"type": "radio",
+		"parentId": 107,
+		"continue": true,
+		"answer": [{
+			"name": "⑴无",
+			"id": 973,
+			"continue": true
+		}, {
+			"name": "⑵〈1次/周",
+			"id": 972,
+			"continue": true
+		},
+		{
+			"name": "⑶1-2次/周",
+			"id": 971,
+			"continue": true
+		}, {
+			"name": "⑷≥ 3次/周",
+			"id": 970,
+			"continue": true
+		}],
+		"placeholder": null
+	}, {
+		"id": 16,
+		"title": "i. 疼痛不适",
+		"intro": "车子（非必填）",
+		"required": false,
+		"type": "radio",
+		"parentId": 114,
+		"continue": true,
+		"answer": [{
+			"name": "⑴无",
+			"id": 969,
+			"continue": true
+		}, {
+			"name": "⑵〈1次/周",
+			"id": 968,
+			"continue": true
+		},
+		{
+			"name": "⑶1-2次/周",
+			"id": 967,
+			"continue": true
+		}, {
+			"name": "⑷≥ 3次/周",
+			"id": 966,
+			"continue": true
+		}],
+		"placeholder": "请输入车辆按揭欠多少"
+	}, {
+		"id": 17,
+		"title": "j. 其它影响睡眠的事情 ",
+		"intro": "房子（必填）",
+		"required": true,
+		"type": "radio",
+		"parentId": 0,
+		"continue": true,
+		"answer": [{
+			"name": "⑴无",
+			"id": 965,
+			"continue": true
+		}, {
+			"name": "⑵〈1次/周",
+			"id": 964,
+			"continue": true
+		},
+		{
+			"name": "⑶1-2次/周",
+			"id": 963,
+			"continue": true
+		}, {
+			"name": "⑷≥ 3次/周",
+			"id": 962,
+			"continue": true
+		}],
+		"placeholder": null
+	}, {
+		"id": 18,
+		"title": "近1个月，总的来说，您认为自己的睡眠质量",
+		"intro": "房子（必填）",
+		"required": true,
+		"type": "radio",
+		"parentId": 117,
+		"continue": true,
+		"answer": [{
+			"name": "⑴很好",
+			"id": 961,
+			"continue": true
+		}, {
+			"name": "⑵较好",
+			"id": 960,
+			"continue": true
+		},
+		{
+			"name": "⑶较差",
+			"id": 959,
+			"continue": true
+		}, {
+			"name": "⑷很差",
+			"id": 958,
+			"continue": true
+		}],
+		"placeholder": null
+	}, {
+		"id": 19,
+		"title": "近1个月，您用药物催眠的情况",
+		"intro": "房子（必填）",
+		"required": true,
+		"type": "radio",
+		"parentId": 132,
+		"continue": true,
+		"answer": [{
+			"name": "⑴无",
+			"id": 957,
+			"continue": true
+		}, {
+			"name": "⑵〈1次/周",
+			"id": 956,
+			"continue": true
+		},
+		{
+			"name": "⑶1-2次/周",
+			"id": 955,
+			"continue": true
+		}, {
+			"name": "⑷≥ 3次/周",
+			"id": 954,
+			"continue": true
+		}],
+		"placeholder": null
+	}, {
+		"id": 22,
+		"title": "近1个月，您常感到困倦吗",
+		"intro": "房子（非必填）",
+		"required": false,
+		"type": "radio",
+		"parentId": 135,
+		"continue": true,
+		"answer": [{
+			"name": "⑴无",
+			"id": 957,
+			"continue": true
+		}, {
+			"name": "⑵〈1次/周",
+			"id": 956,
+			"continue": true
+		},
+		{
+			"name": "⑶1-2次/周",
+			"id": 955,
+			"continue": true
+		}, {
+			"name": "⑷≥ 3次/周",
+			"id": 954,
+			"continue": true
+		}],
+		"placeholder": "请输入房子按揭月供多少（元）"
+	}, {
+		"id": 20,
+		"title": "近1个月，您做事情的精力不足吗",
+		"intro": "房子（非必填）",
+		"required": false,
+		"type": "radio",
+		"parentId": 136,
+		"continue": true,
+		"answer": [{
+			"name": "⑴没有",
+			"id": 957,
+			"continue": true
+		}, {
+			"name": "⑵偶尔有",
+			"id": 956,
+			"continue": true
+		},
+		{
+			"name": "⑶有时有",
+			"id": 955,
+			"continue": true
+		}, {
+			"name": "⑷经常",
+			"id": 954,
+			"continue": true
+		}],
+		"placeholder": "请输入房子价值多少钱（万元）"
+	}]
+}

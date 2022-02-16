@@ -1,0 +1,266 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "睡眠 ",
+				"navigationBarShadow":"blue"
+			}
+		}
+	    ,
+		{
+			"path": "pages/order/order/find",
+			"style": {
+				"navigationBarTitleText": "发现 ",
+				"navigationBarShadow":"blue"
+			}
+		}
+        ,
+		{
+			"path": "pages/mine/mine/mine",
+			"style": {
+			
+				"navigationBarTextStyle": "white",
+				"navigationBarTitleText": "我的",
+				"navigationBarBackgroundColor": "#4CD964",
+				"enablePullDownRefresh": false
+				
+			}
+		},
+		{
+			"path":"pages/music/music/music",
+			"style":{
+				"navigationBarTitleText":"音乐"
+				
+			}
+		}
+            
+        
+       
+        ,{
+            "path" : "pages/mine/mine/info",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "编辑个人资料",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/mine/mine/info",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/mine/mine/question",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/mine/mine/question",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/mine/mine/setting",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/mine/mine/tel",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/mine/mine/login",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/order/order/new1",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/mine/mine/nicheng",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "修改昵称",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/mine/mine/zanting",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/mine/mine/rqun",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/order/order/drink_vue",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/order/order/chunkun_vue",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        
+        
+        ,{
+            "path" : "pages/index/Sleep_scale/Sleep_scale",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "睡眠量表",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/index/Sleep_scale/problem-widget/show",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/order/order/new1",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/order/order/new0",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/order/order/new2",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/order/order/new3",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/demo",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "美团",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"backgroundColor": "#F8F8F8",
+		//"navigationStyle":"default" 顶部状态栏是否显示
+		//"navigationBarShadow":"black"
+		"borderStyle":"black"
+	},
+	"tabBar":{
+		"color":"#999794",
+		"selectedColor":"#33312e",
+		"borderStyle":"black",
+		"backgroundColor":"#fafafa",
+		
+		"list":[
+			{
+				"pagePath":"pages/index/index",
+				"iconPath":"static/sleep.png",
+				"selectedIconPath":"static/sleep_selected.png",
+				"text":"睡眠"
+			},
+			{
+				"pagePath":"pages/order/order/find",
+				"iconPath":"static/find.png",
+				"selectedIconPath":"static/find_selected.png",
+				"text":"发现"
+			},
+			{
+				"pagePath":"pages/music/music/music",
+				"iconPath":"static/check.png",
+				"selectedIconPath":"static/check_selected.png",
+				"text":"音乐"
+			},
+			{
+				"pagePath":"pages/mine/mine/mine",
+				"iconPath":"static/mine.png",
+				"selectedIconPath":"static/mine_selected.png",
+				"text":"我的"
+			}
+		]
+		
+	}
+}

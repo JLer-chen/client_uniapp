@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>上传文件</title>
+        <style>
+            *{
+            margin: 0;
+            padding: 0;
+        }
+        .head-btn{
+            text-align: center;
+            margin-top: 200px;
+        }
+        .file {
+            position: relative;
+            display: inline-block;
+            background: #D0EEFF;
+            border: 1px solid #99D3F5;
+            border-radius: 10px;
+            padding: 24px 50px;
+            overflow: hidden;
+            color: #1E88C7;
+            text-decoration: none;
+            text-indent: 0;
+            line-height: 20px;
+            font-size: 40px;
+        }
+        .file input {
+            position: absolute;
+            font-size: 200px;
+            right: 0;
+            top: 0;
+            opacity: 0;
+        }
+        .file:hover {
+            background: #AADFFD;
+            border-color: #78C3F3;
+            color: #004974;
+            text-decoration: none;
+        }
+        .determine{
+            color: #FFFFFF;
+            background-color: #007AFF;
+            display: inline-block;
+            font-size: 20px;
+            border-radius: 5px;
+            padding: 8px 24px;
+        }
+        .showFileName{
+            display: inline-block;
+            height: 30px;
+            min-width: 300px;
+        }
+        .btn {
+            display: block;
+            margin: 20px auto;
+            padding: 5px;
+            background-color: #007aff;
+            border: 0;
+            color: #ffffff;
+            height: 40px;
+            width: 200px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn1 {
+            display: block;
+            margin: 20px auto;
+            padding: 5px;
+            background-color: #007aff;
+            border: 0;
+            color: #ffffff;
+            height: 40px;
+            width: 200px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn-red {
+            background-color: #dd524d;
+        }
+        .btn-yellow {
+            background-color: #f0ad4e;
+        }
+        .desc {
+            padding: 10px;
+            color: #999999;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="head-btn">
+            <form action="" method="post">
+                <a href="javascript:;" class="file">选择文件
+                    <input type="file" name="uploadFile" id="uploadFile" >
+                </a>
+            </form>
+            <p class="showFileName"></p>
+        </div>
+        <div>
+            <button class="btn" type="button" data-action="redirectTo">确定</button>
+            <button class="btn1" type="button" data-action="navigateBack">取消</button>
+        </div>
+        
+        <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+        <script type="text/javascript" src="https://js.cdn.aliyun.dcloud.net.cn/dev/uni-app/uni.webview.1.5.2.js"></script>
+        <script>
+            function getQuery(name) { // 获取uni传值
+                // 正则：[找寻'&' + 'url参数名字' = '值' + '&']（'&'可以不存在）
+                let reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+                let r = window.location.search.substr(1).match(reg);
+                if(r != null) {
+                    // 对参数值进行解码
+                    return unescape(r[2]);
+                }
+                return null;
+            }
+            console.log(getQuery('token')); // 调用获取参数
+            $(".file").on("change", "input[type='file']", function() {
+                let filePath = $(this).val();
+                localStorage.setItem("fileAddress", filePath);
+                let lastname = localStorage.getItem("fileAddress");
+                if (lastname != "") {
+                    $(".showFileName").html(lastname);
+                } else {
+                    $(".showFileName").html("");
+                }
+            });
+            
+            $('.btn').click(function(evt) {
+              var ipt = document.getElementById('uploadFile');
+              console.log(ipt.files[0]);
+              var formdata = new FormData(); // 创建一个form类型的数据
+              formdata.append("headimgurl",ipt.files[0]); // 获取上传文件的数据
+              formdata.append("operate","UpLoadFile"); // 获取上传文件的数据
+              formdata.append("name","name"); // 获取上传文件的数据
+              console.log(formdata)
+              $.ajax({
+                url: '后端接口',
+                type: "POST",
+                processData: false,
+                contentType: false,
+                data:formdata,
+                headers: {
+                  'token': getQuery('token')
+                },
+                success: function(data) {
+                  alert(data.message)
+                  uni.redirectTo({
+                    url: '/pages/user/personal/personal',
+                  });
+                },
+                error: function(err) {
+                  alert('上传失败')
+                }
+              });
+            });
+            //取消文件上传
+            $('.btn1').click(function(evt) {
+              var target = evt.target;
+              if (target.tagName === 'BUTTON') {
+                var action = target.getAttribute('data-action');
+                if (action == 'navigateBack') {
+                  uni.navigateBack({
+                      delta: 1
+                  });
+                }
+              }
+            });
+        </script>
+    </body>
+</html>
