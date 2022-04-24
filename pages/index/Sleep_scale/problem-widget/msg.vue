@@ -29,7 +29,7 @@
 				    title: '加载中'
 				});
 				uni.request({
-					url:'http://192.168.31.185:8088/test4',
+					url:'http://192.168.137.146:8088/testlocal',
 					method:'GET',
 					success: (res) => {
 						console.log(res.data);

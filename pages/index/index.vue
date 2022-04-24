@@ -7,12 +7,13 @@
 		
 		<view class="circle" @click="monitor()">{{state}}</view>
 		
-		<button @click="to_show()">showpage</button>
+		<!-- <button @click="to_show()">showpage</button>
 		<button>{{variance_total}}</button>
 		<button @click="set_file()">{{statue}}</button>
 		<button>count:{{count}}</button>
 		<button @click="get_scale()">进入睡眠量表</button>
 		<button @click="intodemo()" class="temp">{{stop_statue}}</button>
+		<button @click="get_tanc()">弹窗</button> -->
 			<!-- <view class="table" @click="get_scale()">睡眠量表</view>
 			<view class="table1">可视化</view> -->
 		<!-- <view class="little_block1"></view>
@@ -122,6 +123,23 @@
 				
 		},
 		methods:{
+			get_tanc(){
+				uni.showModal({
+					 title: '提示',
+					    content: '数据收集成功，点击确定完成睡眠量表',
+					    success: function (res) {
+					        if (res.confirm) {
+					            console.log('用户点击确定');
+								uni.navigateTo({
+									url:"Sleep_scale/Sleep_scale"
+								});
+							
+					        } else if (res.cancel) {
+					            console.log('用户点击取消');
+					        }
+					    }
+				});
+			},
 			 intodemo(){
 				 uni.navigateTo({
 				 	url:'/pages/demo'
@@ -142,18 +160,22 @@
 					this.arrz_25=[];
 					
 					if(this.state=="start"){
-						var total=0;
+						console.log('start');
+						
+						
 						this.time_id=setInterval(()=>{
 							var data_temp=this.chartData;
 							// var rand=Math.random()*30;
 							// rand=Math.floor(rand);
-							
+							console.log('var_t'+this.variance_total)
 							data_temp.series[0].data=this.variance_total/100;
 							var real_sta_str=Math.floor(this.variance_total);
 							real_sta_str=real_sta_str.toString();
-							// console.log('data_temp_data is '+data_temp.series[0].data);
+							
+							console.log('data_temp_data is '+data_temp.series[0].data);
+							console.log('str_ is '+real_sta_str);
 							/* data_temp.series[1].data=0.5; */
-							// console.log(this.chartData.series);
+							//console.log(this.chartData.series);
 							this.chartData=data_temp;
 							this.opt.title.name=real_sta_str;
 							/* console.log(JSON.stringify(this.chartData)); */
@@ -163,6 +185,7 @@
 							
 						});
 					  uni.onAccelerometerChange(  (res)=> {
+						  var total=0;  
 							/* var d=new Date(); */
 						  //console.log(res.x);
 						  //console.log(res.y);
@@ -207,9 +230,9 @@
 									variance_z+=Math.pow((this.arrz_25[i]-ba_z),2)/5;
 									
 								}
-								/* console.log('va_x is '+variance_x);
+								console.log('va_x is '+variance_x);
 								console.log('va_y is '+variance_y);
-								console.log('va_z is '+variance_z); */
+								console.log('va_z is '+variance_z);
 								
 								total=(variance_x+variance_y+variance_z)/3*50000;
 								if(total>1&&total<100){
@@ -225,6 +248,7 @@
 								if(total<1){
 									total=Math.sqrt(this.variance_total+10);
 								}
+								console.log(total);
 								this.variance_total=total;
 								// console.log('total is '+total);
 								// console.log('var_ta is '+this.variance_total);
@@ -256,7 +280,7 @@
 															 // console.log(temp_json);
 															 // console.log(typeof temp_json);
 															 uni.request({
-															 	url:'http://192.168.31.185:8088/post3',
+															 	url:'http://192.168.137.146:8088/post3',
 															 	method:'POST',
 															 	data:{
 															 		test_json:temp_json
@@ -299,10 +323,10 @@
 					}
 					else{
 						// clearInterval(this.time_id);
-						// var data_temp=this.chartData;
-						// data_temp.series[0].data=0;
-						// this.chartData=data_temp;
-						// this.opt.title.name='0';
+						var data_temp=this.chartData;
+						data_temp.series[0].data=0;
+						this.chartData=data_temp;
+						this.opt.title.name='0';
 						console.log('stop monitoring');
 						/* uni.stopAccelerometer({
 							success: () => {
@@ -433,7 +457,7 @@
 		  width: 100%;
 		  height: 300px;
 		  position: relative;
-		  top: 300px;
+		  top: 400px;
 			
 	}
 	.index_box{
@@ -473,7 +497,8 @@
 	  width: 300px;
 	  height: 300px;
 	  background: #0fbfc8;
-		position: absolute; left: 50%; transform: translateX(-50%);top: 150px;//top可以注释
+		position: absolute; left: 50%; transform: translateX(-50%);
+		//top: 150px;//top可以注释
 		line-height: 300px;
 		text-align: center;
 		font-weight: 300;

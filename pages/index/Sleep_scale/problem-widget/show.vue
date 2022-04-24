@@ -11,7 +11,7 @@
 			<view class="show_tst">TST睡眠时长：{{tst}}min</view>
 			<view class="show_sol">SOL入睡时长：{{sol}}min</view>
 			<view class="show_waso">WASO醒觉时长：{{waso}}min</view>
-			<button @click="print_data()">dddd</button>
+			
 			<view class="charts-box">
 			  <qiun-data-charts
 			    type="column"
@@ -85,7 +85,7 @@
 							console.log(temp_json);
 							console.log(typeof temp_json);
 							uni.request({
-								url:'http://192.168.31.185:8088/post3',
+								url:'http://192.168.137.146:8088/post3',
 								method:'POST',
 								data:{
 									test_json:temp_json

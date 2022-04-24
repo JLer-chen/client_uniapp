@@ -44,7 +44,7 @@
 			log_func(a,b){
 				console.log('a and b is '+a+' '+b)
 				uni.request({
-					url:'http://192.168.31.185:8088/post2',
+					url:'http://192.168.137.146:8088/post2',
 					method:'POST',
 					data:{
 						accout_sent:a,
@@ -104,7 +104,7 @@
 			sign_func(a,b){
 				
 				uni.request({
-					url:'http://192.168.31.185:8088/post1',
+					url:'http://192.168.137.146:8088/post1',
 					data:{
 /* 						data:res,
 						url:'baidu.com' */
